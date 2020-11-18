@@ -1,0 +1,105 @@
+<html>
+
+<b>Here is Mustafa's Fist Game</b>
+
+<canvas id="gameCanvas" width = "800" height = "600"></canvas>
+
+
+<script>
+
+var canvas;
+var canvasContext;
+var ballX = 50;
+var ballY = 50;
+var ballSpeedX = 8;
+var ballSpeedY = 4;
+
+window.onload = function() {
+	
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+
+	var framesPerSecond = 30;
+	
+	setInterval(function() {
+
+		moveEverything();
+		drawEverything();
+	}, 1000/framesPerSecond);
+	
+	
+}
+
+
+function moveEverything() {
+
+	ballX = ballX + ballSpeedX;
+	ballY = ballY + ballSpeedY
+
+	if(ballX > canvas.width ){
+		ballSpeedX = -ballSpeedX;	
+	}
+	
+	if(ballX < 0) {
+
+		ballSpeedX = -ballSpeedX;
+	}
+	
+	if(ballY < 0) {
+		ballSpeedY = -ballSpeedY;
+
+	}
+
+	if(ballY > canvas.height) {
+		ballSpeedY = -ballSpeedY;
+	}
+
+}
+
+
+function drawEverything() {
+
+
+	// next line blacks out the screen with blac
+	colorRect(0,0,canvas.width, canvas.height, 'black');
+	
+	// this is left player paddle
+	colorRect(0, 200, 10, 200, 'white');
+
+	
+	// I don't know what it this yet
+	colorRect(350, 250, 100, 100, 'green');
+
+	
+	// this line draws the red ball
+	colorRect(ballX, 100, 10, 10, 'red');
+
+	// this line draws white circle ball
+	colorCircle(ballX, ballY, 10, 'white');
+
+
+}
+
+	// this function moves the white ball
+function colorCircle(centerX, centerY, radius, drawColor) {
+	// put the white ball drawing here
+
+	canvasContext.fillStyle = drawColor;
+	canvasContext.beginPath();
+	canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
+	canvasContext.fill();
+
+
+}
+
+
+function colorRect(leftX, topY, width, height, drawColor) {
+
+	canvasContext.fillStyle = drawColor;
+	canvasContext.fillRect(leftX, topY, width, height);
+
+}
+
+
+</script>
+</html>

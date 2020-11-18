@@ -1,0 +1,57 @@
+<html>
+
+<canvas id="gameCanvas" width = "1200" height = "900"></canvas>
+
+<script>
+
+	var canvas;
+	var canvasContext;
+	
+	var ballRed = 50;
+	var ballRedSpeed = 5;
+
+	window.onload = function() {
+	
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+
+	var framesPerSecond = 30;
+
+	setInterval(function() { 
+
+		moveEverything();
+		drawEverything();
+		
+		}, 1000/framesPerSecond);
+
+	}
+
+function moveEverything() {
+	ballRed = ballRed + ballRedSpeed;
+	if(ballRed > canvas.width) {
+		ballRedSpeed = -ballRedSpeed;
+	}
+
+	if(ballRed < 0) {
+		ballRedSpeed = -ballRedSpeed;
+	}
+
+}
+
+function drawEverything() {
+
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0, canvas.width, canvas.height);
+
+	canvasContext.fillStyle = 'green';
+	canvasContext.fillRect(0,200,10,200);
+
+	canvasContext.fillStyle = 'red';
+	canvasContext.fillRect(ballRed, 100, 10,10);
+
+
+}
+
+</script>
+
+</html>

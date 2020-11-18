@@ -1,0 +1,58 @@
+<html>
+
+<b>Here is Mustafa's Fist Game</b>
+
+<canvas id="gameCanvas" width = "800" height = "600"></canvas>
+
+
+<script>
+
+var canvas;
+var canvasContext;
+var ballBlue = 50;
+
+window.onload = function() {
+	
+	canvas = document.getElementById('gameCanvas');
+	canvasContext = canvas.getContext('2d');
+
+	var framesPerSecond = 30;
+	
+	setInterval(drawEverything, 1000/framesPerSecond);
+	
+	
+}
+
+function callBoth() {
+	moveEverything();
+	drawEverything();
+
+}
+
+
+function moveEverything() {
+
+	ballBlue = ballBlue + 5;
+}
+
+
+function drawEverything() {
+
+	
+
+	
+
+	canvasContext.fillStyle = 'black';
+	canvasContext.fillRect(0,0,canvas.width, canvas.height);
+
+	canvasContext.fillStyle = 'white';
+	canvasContext.fillRect(0, 200, 10, 200);
+
+	canvasContext.fillStyle = 'green';
+	canvasContext.fillRect(350, 250, 100, 100);
+	
+	canvasContext.fillStyle = 'blue';
+	canvasContext.fillRect(ballBlue, 100, 10, 10);
+}
+</script>
+</html>
