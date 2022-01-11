@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    width: 20%;
+    margin-left: 35%;
+    margin-right: 50%;
+    margin-top: 10%;
+}
+
+body {
+    background-color: blue;
+}
+.container {
+    width: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.title {
+    text-align: center;
+    color: rgba(3, 45, 96, 1);
+}
+.header-p {
+    text-align: center;
+    color: rgba(100, 98, 98);
+}
+
+.form-container {
+
+}
+
+.form {
+    
+}

@@ -1,0 +1,83 @@
+h1 {
+
+    color: orange;
+    /* background-color: yellow; */
+
+
+}
+
+h2 {
+
+    color: red;
+    /* background-color: yellow; */
+
+}
+
+h3 {
+    color: green;
+    /* background-color: yellow; */
+
+}
+
+a {
+    color: grey;
+    /* background-color: yellow; */
+
+}
+
+p {
+    color: blue;
+    /* background-color: yellow; */
+
+}
+
+.americas {
+    color: hotpink;
+    background-color: blue;
+}
+.europe {
+    color: lawngreen;
+    background-color: mediumaquamarine;
+}
+.asia {
+    color: orange;
+    background-color: palegreen;
+}
+
+.css_classes {
+    color: purple;
+    background-color: tan;
+}
+.title {
+    columns: yellow;
+    background-color: grey;
+}
+
+.text_1 {
+    color: thistle;
+    background-color: green;
+    font-size: 44px;
+    
+}
+
+.text_2 {
+    /* color: yellow; */
+    /* background-color: red; */
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.align {
+    text-align: center;
+}
+
+.content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: right;
+    line-height: 1.5;
+
+}
+

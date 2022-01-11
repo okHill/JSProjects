@@ -1,0 +1,52 @@
+
+h1 {
+    color: orange;
+    background-color: yellow;
+}
+h2 {
+    color: red;
+    background-color: yellow;
+}
+h3 {
+    color: green;
+    background-color:goldenrod;
+}
+a {
+    color: gray;
+    background-color:blue;
+}
+p {
+    color: blue;
+    background-color:green;
+}
+
+.americas {
+    color: hotpink;
+    background-color: darkblue;
+}
+
+.europe {
+    color: lawngreen;
+    background-color: darkgreen;
+}
+
+.asia {
+    color: orange;
+    background-color: dimgray;
+}
+
+.css-classes {
+    color: purple;
+    background-color: lightblue;
+}
+
+.title {
+    color: lightblue;
+}
+.text {
+
+    color: lightseagreen;
+    background-color: linen;
+    font-style: italic;
+    font-weight: bold;
+}
